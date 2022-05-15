@@ -7,7 +7,7 @@
     "test": "ts-mocha -p tsconfig.json src/**/*.spec.ts",
     "start-nodemon": "concurrently \"npx tsc --watch\" \"nodemon -q src/dist/index.js\"",
     "start": "cross-env NODE_ENV=local npm run start-nodemon",
-    "docker-start": "node ./src/index.js"
+    "docker-start": "node ./src/dist/index.js"
   },
   "keywords": [],
   "author": "fran",
