@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Mower's
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project consists of two parts, frontend and backend.
 
-## Available Scripts
+## Frontend
 
-In the project directory, you can run:
+The frontend is developed with React and consists of a graphical interface that allows us to easily enter the data required by the api through a form, it also shows the trajectories of the mowers using svg. It is developed with typescript and bootstrap.
 
-### `npm start`
+It can be started on port 3000 with the command:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### npm start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The tests are developed with RTL and Cypress. To run the unit tests we launch the command: 
 
-### `npm test`
+### npm run test
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For the end to end tests we run the command:
 
-### `npm run build`
+### npm run cy:open
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This opens the Cypress interface and allows us to run the test, we must have the backend up to run this test.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The backend is developed in NodeJs with ExpressJs using typescript. With the command:
 
-### `npm run eject`
+### npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+We start the server on port 4003.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+With the command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### npm run test
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run the unit test developed with Mocha and Chai.
 
-## Learn More
+## Run with Docker Compose
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+It is possible to lift both parts with their corresponding docker with the command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### docker-compose up -d --build
+
+This starts the projects on port 3000 for the frontend and 4004 for the backend.
