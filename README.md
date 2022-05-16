@@ -8,15 +8,15 @@ The frontend is developed with React and consists of a graphical interface that 
 
 It can be started on port 3000 with the command:
 
-### npm start
+> npm start
 
 The tests are developed with RTL and Cypress. To run the unit tests we launch the command: 
 
-### npm run test
+> npm run test
 
 For the end to end tests we run the command:
 
-### npm run cy:open
+> npm run cy:open
 
 This opens the Cypress interface and allows us to run the test, we must have the backend up to run this test.
 
@@ -24,13 +24,13 @@ This opens the Cypress interface and allows us to run the test, we must have the
 
 The backend is developed in NodeJs with ExpressJs using typescript. With the command:
 
-### npm start
+> npm start
 
 We start the server on port 4003.
 
 With the command:
 
-### npm run test
+> npm run test
 
 Run the unit test developed with Mocha and Chai.
 
@@ -38,6 +38,6 @@ Run the unit test developed with Mocha and Chai.
 
 It is possible to lift both parts with their corresponding docker with the command:
 
-### docker-compose up -d --build
+> docker-compose up -d --build
 
 This starts the projects on port 3000 for the frontend and 4004 for the backend.
