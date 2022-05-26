@@ -9,16 +9,16 @@ import './home.css'
 const submitReducer = (state: IStateSubmit, action: { type: 'loading' | 'success' | 'error' | 'idle', payload?: any }) => {
     switch (action.type) {
         case 'idle': {
-            return { status: 'idle', data: null }
+            return { ...state, status: 'idle', data: null }
         }
         case 'loading': {
-            return { status: 'loading', data: null }
+            return { ...state, status: 'loading', data: null }
         }
         case 'success': {
-            return { status: 'success', data: action.payload }
+            return { ...state, status: 'success', data: action.payload }
         }
         case 'error': {
-            return { status: 'error', data: action.payload }
+            return { ...state, status: 'error', data: action.payload }
         }
         default: {
             throw new Error(`Unhandled action type: ${action}`)
